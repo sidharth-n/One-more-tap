@@ -1,15 +1,17 @@
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #f4f4f4;
+  overflow: hidden;
+  position: relative;
 }
 
 .circle {
   background-color: black;
-  border-radius: 50%;
-  transition: width 0.2s, height 0.2s; /* Smooth bubble growth */
+  transition: width 0.5s, height 0.5s, borderRadius 0.5s;
 }
 
 .start-text,
@@ -19,9 +21,31 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 24px;
-  color: #333;
+  color: #ffffff;
 }
 
 .level-done {
-  bottom: 50%; /* Center the "Level Done" message */
+  bottom: 50%;
+}
+
+.next-level {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.level-display {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  color: #333;
 }
